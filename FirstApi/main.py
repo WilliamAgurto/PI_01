@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 import pandas as pd
-from typing import Optional
-from typing import List, Tuple
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 app = FastAPI(title='API FILMS',description='Here, I will recomend you the bes movies', version='1.1')
@@ -31,7 +29,7 @@ historicamente' return {'mes':mes, 'cantidad':respuesta}
 '''
 
 @app.get('/movie_month/{month}')
-def peliculas_mes(month:Optional[str]='January'):
+def peliculas_mes(month:str):
     df_movies_copy = df_movies.copy()
     df_movies_copy['month'] = df_movies_copy.release_date.dt.month_name()
     df_movies_copy = df_movies_copy.applymap(lambda x: x.lower() if isinstance(x, str) else x)
@@ -43,7 +41,7 @@ def peliculas_mes(month:Optional[str]='January'):
  historicamente' return {'dia':dia, 'cantidad':respuesta}
 '''
 @app.get("/movie_day/{day}")
-def movie_day(day:Optional[str]=None):
+def movie_day(day:str):
     df_movies_copy = df_movies.copy()
     df_movies_copy['day'] = df_movies_copy.release_date.dt.day_name()
     df_movies_copy = df_movies_copy.applymap(lambda x: x.lower() if isinstance(x, str) else x)
@@ -53,8 +51,8 @@ def movie_day(day:Optional[str]=None):
 '''
 3. Se ingresa la franquicia, retornando la cantidad de peliculas, ganancia total y promedio
 '''
-@app.get("/franchise{franchise}")
-def franchise(franchise: Optional[str] = None):
+@app.get("/franchise/{franchise}")
+def franchise(franchise: str):
     df_movies_copy = df_movies.copy()
     result = df_movies_copy[df_movies_copy.belongs_to_collection == franchise]['title'].count()
     total_revenue = df_movies_copy[df_movies_copy.belongs_to_collection == franchise]['revenue'].sum()
@@ -68,7 +66,7 @@ def peliculas_pais(pais:str):
     return {'pais':pais, 'cantidad':respuesta}
 '''
 @app.get("/movies_country/{country}")
-def movies_country(country:Optional[str]=None):
+def movies_country(country:str):
     df_movies_copy = df_movies.copy()
     country_ = df_movies_copy.production_countries
     country_ = country_.str.split(',')
@@ -83,7 +81,7 @@ def productoras(productora:str):
     return {'productora':productora, 'ganancia_total':respuesta, 'cantidad':respuesta
 '''
 @app.get("/production_companies/{production_companies}")
-def production_companies(production_companies:Optional[str]=None):
+def production_companies(production_companies:str):
     df_movies_copy = df_movies.copy()
     result=df_movies_copy[df_movies_copy.production_companies==production_companies].revenue.count()
     total_revenue=df_movies_copy[df_movies_copy.production_companies==production_companies].revenue.sum()
@@ -96,7 +94,7 @@ def retorno(pelicula:str):
     return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}
 '''
 @app.get("/return/{movie}")
-def return_(movie:Optional[str]=None):
+def return_(movie:str):
     df_movies_copy = df_movies.copy()
     investment = df_movies_copy[df_movies_copy.title == movie].budget[0]
     revenue = df_movies_copy[df_movies_copy.title == movie].revenue[0]
@@ -106,7 +104,7 @@ def return_(movie:Optional[str]=None):
 
 ##########recommendation function
 @app.get('/get_recomendation/{title}')
-def get_recomendation(title:Optional[str]=None):
+def get_recomendation(title:str):
     df_movies_copy = df_movies.copy()
     # Loading just two columns from CSV file on pandas.
     overview = df_movies_copy[['title','overview']]
