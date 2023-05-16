@@ -23,7 +23,8 @@
 ### **Project Estructure**
 
 ------------
-This is my first individual project focus on doing ETL(Extract, Transform and load), EDA (Exploratory data Analysis).<br><br>
+This is my first individual project focus on making ETL(Extract, Transform and load), EDA (Exploratory data Analysis) and 
+an API deployment using Render + FastApi. [Here](https://api-ml-98n4.onrender.com/docs) you will find the deployment<br><br>
 
 ### **Project Development**
 
@@ -93,7 +94,7 @@ Main file: [RecommendationSystem.ipynb](https://github.com/WilliamAgurto/PI_01/b
 **Data Source  ➡️** [Data](https://github.com/WilliamAgurto/PI_01/tree/main/datasets)
 ------------
 
-Datasets: The folder contains two files..<br><br>
+Datasets: The folder contains two files.<br><br>
 
 **Supporting Material ⚪** 
 ------------
