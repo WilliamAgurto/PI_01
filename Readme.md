@@ -32,8 +32,7 @@ an API deployment using Render + FastApi. [Here](https://api-ml-98n4.onrender.co
 **1. ETL Process Stage ➡️**
 Main file: [etl_principal.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/ETL.ipynb)
 - The ETL (Extraction, Transformation, and Load) process was carried out.
-- The necessary dataframes for the process were prepared, resulting from the treatment of the four provided datasets (amazon_prime_titles.csv, disney_plus_titles.csv, hulu_titles.csv, netflix_titles.csv) of movies and series (titles).
-- A single dataframe was prepared for the treatment of the eight provided datasets with information on the ratings.
+- The necessary dataframes for the process were prepared.+
 - The required MVP (Minimum Viable Product) tasks were performed by:<br>
 
 		i. Some fields, such as belongs_to_collection, production_companies, and others (see data dictionary), are nested, meaning they either have a dictionary or a list as values in each row. You will need to unnest them in order to join them back to the dataset or find a way to access that data without unnesting.<br>
