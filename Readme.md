@@ -51,7 +51,17 @@ Main file: [etl_principal.ipynb](https://github.com/WilliamAgurto/PI_01/blob/mai
         
         vi.Remove columns that will not be used: video, imdb_id, adult, original_title, vote_count, poster_path, and homepage.<br>
 
-**2. API Development Stage ➡️**
+**2. Exploratory Data Analysis Stage ➡️** Main file: [eda_principal.ipynb](https://github.com/WilliamAgurto/PI_01_ML_OPS/blob/master/EDA.ipynb)
+
+- The required MVP tasks were performed:
+- The dataframe (movie_dataset) were analyzed in terms of their structure, shape, information, null values, duplicate values, etc.
+- Histograms were created on Matplotlib and Seaborn to obtain a general overview of the data distribution.<br><br>
+
+**3. Recommendation System Stage ➡️**
+Main file: [RecommendationSystem.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/RecomendationSystem.ipynb)
+-  TfidfVectorizer library was used in order to achieve project requests and this was used on FastApi.<br><br>
+
+**4. API Development Stage ➡️**
 Main file: [main.py](https://github.com/WilliamAgurto/PI_01/blob/main/FirstApi/main.py)
 - The process of making the information available through the FastAPI framework was carried out.
 - The Render cloud was used to deploy the project.
@@ -82,17 +92,6 @@ Main file: [main.py](https://github.com/WilliamAgurto/PI_01/blob/main/FirstApi/m
         vi. def retorno(pelicula):
             You enter the movie, returning the investment, revenue, return and year in which it was released
             return {'pelicula':pelicula, 'investment':investment, 'revenue':revenue,'return':return_, 'year':year}<br><br>
-
-
-**3. Exploratory Data Analysis Stage ➡️** Main file: [eda_principal.ipynb](https://github.com/WilliamAgurto/PI_01_ML_OPS/blob/master/EDA.ipynb)
-
-- The required MVP tasks were performed:
-- The dataframe (movie_dataset) were analyzed in terms of their structure, shape, information, null values, duplicate values, etc.
-- Histograms were created on Matplotlib and Seaborn to obtain a general overview of the data distribution.<br><br>
-
-**4. Recommendation System Stage ➡️**
-Main file: [RecommendationSystem.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/RecomendationSystem.ipynb)
--  TfidfVectorizer library was used in order to achieve project requests and this was used on FastApi.<br><br>
 
 **Data Source  ➡️** [Data](https://github.com/WilliamAgurto/PI_01/tree/main/datasets)
 ------------
