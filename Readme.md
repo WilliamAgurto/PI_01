@@ -12,7 +12,7 @@
 
 
 <div align="center"> Henry's Labs <br>
-	 by  William Andres Agurto Prado (DTS-09) </div>
+	 by  William Andres Agurto Prado (DTS-10) </div>
 
 <div align="center">
 
