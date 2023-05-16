@@ -57,35 +57,35 @@ Main file: [main.py](https://github.com/WilliamAgurto/PI_01/blob/main/FirstApi/m
 - The required MVP queries (functions) were performed:<br>
 
 		i. defpeliculas_mes(mes):
-            You enter the month and the function returns the number of movies that were historically released that month (month name, as str, example 'January')
-            return {'mes':mes, 'cantidad':respuesta}.
+            You enter the month and the function returns the number of movies that were historically released that month (month name, as str, example 'enero')
+            return {'month':mes, 'quantity':result}.
 
         ii. def peliculas_dia(dia):
             You enter the day and the function returns the number of movies that were historically released that day (of the week, as str, example 'Monday')
             return {'dia':dia, 'cantidad':respuesta}.
 
         iii.def franquicia(franquicia):
-            You enter the franchise, returning the number of movies, total profit and average profit
-            return {'franquicia':franquicia, 'cantidad':respuesta, 'ganancia_total':respuesta, 'ganancia_promedio':respuesta}.
+            You enter the franchise, returning the number of movies, total revenue and average revenue
+            return {'franchise':franquicia, 'quanity':result, 'total revenue':total_revenue, 'average revenue':average_revenue}. 
 
         iv. def peliculas_pais(pais):
             You enter the country, returning the number of movies produced in it
-            return {'pais':pais, 'cantidad':respuesta}.
+            return {'country':pais, 'quantity':result}.
 
         v. def productoras(productora):
             '''You enter the production company, returning the total profit and number of movies produced'''
-            return {'productora':productora, 'ganancia_total':respuesta, 'cantidad':respuesta}
+            return {'productora':productora, 'total revenue':total_revenue, 'quantity':result}
 
         vi. def retorno(pelicula):
-            You enter the movie, returning the investment, profit, return and year in which it was released
-            return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}<br><br>
+            You enter the movie, returning the investment, revenue, return and year in which it was released
+            return {'pelicula':pelicula, 'investment':investment, 'revenue':revenue,'return':return_, 'year':year}<br><br>
 
 
 **3. Exploratory Data Analysis Stage ➡️** Main file: [eda_principal.ipynb](https://github.com/WilliamAgurto/PI_01_ML_OPS/blob/master/EDA.ipynb)
 
 - The required MVP tasks were performed:
 - The dataframe (movie_dataset) were analyzed in terms of their structure, shape, information, null values, duplicate values, etc.
-- Histograms were created on Matplotlib and Seaborn to obtain a general overview of the data distribution of the movie and series dataframe.<br><br>
+- Histograms were created on Matplotlib and Seaborn to obtain a general overview of the data distribution.<br><br>
 
 **4. Recommendation System Stage ➡️**
 Main file: [RecommendationSystem.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/RecomendationSystem.ipynb)
