@@ -31,6 +31,12 @@ historicamente'
 def peliculas_mes(mes:str):
     df_movies_copy = df_movies.copy()
     df_movies_copy['month'] = df_movies_copy.release_date.dt.month_name()
+    # Dicctionary traduction
+    translation_dict = {'January': 'enero', 'February': 'febrero', 'March': 'marzo', 'April': 'abril', 'May': 'mayo',
+                        'June':'junio','July':'julio','August': 'agosto','September': 'septiembre','October': 'octubre',
+                        'November': 'noviembre','December': 'diciembre'}
+    # Applying traduction
+    df_movies_copy['month'] = df_movies_copy['month'].replace(translation_dict)
     df_movies_copy = df_movies_copy.applymap(lambda x: x.lower() if isinstance(x, str) else x)
     result = df_movies_copy[df_movies_copy.month==mes]['title'].count()
     return {'month':mes,'quantity':int(result)}
@@ -43,6 +49,16 @@ def peliculas_mes(mes:str):
 def peliculas_dia(dia:str):
     df_movies_copy = df_movies.copy()
     df_movies_copy['day'] = df_movies_copy.release_date.dt.day_name()
+    # Dicctionary traduction
+    translation_dict = {'Monday': 'lunes',
+                        'Tuesday': 'martes',
+                        'Wednesday': 'miercoles',
+                        'Thursday': 'jueves',
+                        'Friday': 'viernes',
+                        'Saturday': 'sabado',
+                        'Sunday': 'domingo'}
+    # Applying traduction
+    df_movies_copy['day'] = df_movies_copy['day'].replace(translation_dict)
     df_movies_copy = df_movies_copy.applymap(lambda x: x.lower() if isinstance(x, str) else x)
     result = df_movies_copy[df_movies_copy.day==dia]['title'].count()
     return {'day':dia,'quantity':int(result)}
