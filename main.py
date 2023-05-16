@@ -17,7 +17,7 @@ async def index():
 
 #loading Data
 #df_movies= pd.read_csv("datasets\new_movies_dataset.csv" ,parse_dates=['release_date'])
-df_movies= pd.read_csv("https://github.com/WilliamAgurto/PI_01/blob/main/datasets/new_movies_dataset.csv" )
+df_movies= pd.read_csv("https://github.com/WilliamAgurto/PI_01/blob/main/datasets/new_movies_dataset.csv",date_parser=['release_date'] )
 
 '''''
 1. 'Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes (nombre del mes, en str, ejemplo 'enero') 
