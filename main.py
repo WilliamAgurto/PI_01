@@ -66,7 +66,7 @@ def peliculas_dia(dia:str):
 '''
 3. Se ingresa la franquicia, retornando la cantidad de peliculas, ganancia total y promedio
 '''
-@app.get("/franquicia{franquicia}")
+@app.get("/franquicia/{franquicia}")
 def franquicia(franquicia:str):
     try: 
         df_movies_copy = df_movies.copy()
