@@ -3,7 +3,6 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 app = FastAPI(title='API FILMS',description='Here, I will recomend you the bes movies', version='1.1')
-
 #http://127.0.0.1:8000
 '''''
 Deben crear 6 funciones para los endpoints que se consumirán en la API, recuerden que deben tener un decorador por cada una (@app.get(‘/’)).
@@ -51,8 +50,8 @@ def movie_day(day:str):
 '''
 3. Se ingresa la franquicia, retornando la cantidad de peliculas, ganancia total y promedio
 '''
-@app.get("/franchise/{franchise}")
-def franchise(franchise: str):
+@app.get("/franchise{franchise}")
+def franchise(franchise:str):
     df_movies_copy = df_movies.copy()
     result = df_movies_copy[df_movies_copy.belongs_to_collection == franchise]['title'].count()
     total_revenue = df_movies_copy[df_movies_copy.belongs_to_collection == franchise]['revenue'].sum()
@@ -65,7 +64,7 @@ def peliculas_pais(pais:str):
     'Ingresas el pais, retornando la cantidad de peliculas producidas en el mismo'
     return {'pais':pais, 'cantidad':respuesta}
 '''
-@app.get("/movies_country/{movies_country}")
+@app.get("/movies_country/{country}")
 def movies_country(country:str):
     df_movies_copy = df_movies.copy()
     country_ = df_movies_copy.production_countries
@@ -93,7 +92,7 @@ def retorno(pelicula:str):
     ''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''
     return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}
 '''
-@app.get("/return_/{return_}")
+@app.get("/return/{movie}")
 def return_(movie:str):
     df_movies_copy = df_movies.copy()
     investment = df_movies_copy[df_movies_copy.title == movie].budget[0]
@@ -103,7 +102,7 @@ def return_(movie:str):
     return {'movie':movie, 'investment':float(investment), 'revenue':float(revenue),'return':float(return_), 'year':int(year)}
 
 ##########recommendation function
-@app.get('/get_recomendation/{get_recomendation}')
+@app.get('/get_recomendation/{title}')
 def get_recomendation(title:str):
     df_movies_copy = df_movies.copy()
     # Loading just two columns from CSV file on pandas.
