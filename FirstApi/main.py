@@ -16,7 +16,7 @@ async def index():
     return "Function for searching: 1. peliculas_mes 2. peliculas_dia, 3. franquicia, 4. peliculas_pais, 5.productoras  y 6.retorno"
 
 #loading Data
-path = "../datasets/new_movies_dataset.csv"
+path = "../datasets/new_movies_dataset.csv" 
 df_movies= pd.read_csv(path,parse_dates=['release_date'],encoding ='utf-8')
 #df= pd.read_csv('C:\Users\Hp\Documents\henry course\Labs\PI_01\datasets\new_movies_dataset.csv',parse_dates=['release_date'])
 
