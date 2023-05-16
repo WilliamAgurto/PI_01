@@ -17,7 +17,7 @@ async def index():
 
 #loading Data
 path = 'C:\\Users\\Hp\\Documents\\henry course\\Labs\\PI_01\\datasets\\new_movies_dataset.csv'
-df_movies= pd.read_csv(path,parse_dates=['release_date'])
+df_movies= pd.read_csv(path,parse_dates=['release_date'],encoding ='utf-8')
 #df= pd.read_csv('C:\Users\Hp\Documents\henry course\Labs\PI_01\datasets\new_movies_dataset.csv',parse_dates=['release_date'])
 
 
