@@ -98,4 +98,4 @@ Datasets: The folder contains two files..<br><br>
 ------------
 
 In this same repository, you can find some helpful links. they were useful to achive the project requests.<br>
-Click on [here](https://github.com/WilliamAgurto/PI_01_ML_OPS/blob/master/SupportMaterial.md) if you want to check some of them.
+Click on [here](https://github.com/WilliamAgurto/PI_01/blob/main/SupportingMaterial.md) if you want to check some of them.
