@@ -87,8 +87,7 @@ Main file: [main.py](https://github.com/WilliamAgurto/PI_01/blob/main/FirstApi/m
 
 **4. Recommendation System Stage ➡️**
 Main file: [RecommendationSystem.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/RecomendationSystem.ipynb)
-- The Surprise library was used, based on the SVD algorithm.
-- Also, it was used TfidfVectorizer library in order to achieve project requests and this was used on FastApi.<br><br>
+-  TfidfVectorizer library was used in order to achieve project requests and this was used on FastApi.<br><br>
 
 **Data Source  ➡️** [Data](https://github.com/WilliamAgurto/PI_01/tree/main/datasets)
 ------------
