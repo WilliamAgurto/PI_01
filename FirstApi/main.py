@@ -23,8 +23,8 @@ df_movies= pd.read_csv(path,parse_dates=['release_date'])
 
 
 '''''
-1. def peliculas_mes(mes): 'Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes (nombre del mes, en str, ejemplo 'enero') 
-historicamente' return {'mes':mes, 'cantidad':respuesta}
+1. 'Se ingresa el mes y la funcion retorna la cantidad de peliculas que se estrenaron ese mes (nombre del mes, en str, ejemplo 'enero') 
+historicamente'
 '''
 
 @app.get('/peliculas_mes/{mes}')
@@ -36,8 +36,8 @@ def peliculas_mes(mes:str):
     return {'month':mes,'quantity':int(result)}
     
 '''''    
-#2.def peliculas_dia(dia): 'Se ingresa el dia y la funcion retorna la cantidad de peliculas que se estrenaron ese dia (de la semana, en str, ejemplo 'lunes')
- historicamente' return {'dia':dia, 'cantidad':respuesta}
+#2. 'Se ingresa el dia y la funcion retorna la cantidad de peliculas que se estrenaron ese dia (de la semana, en str, ejemplo 'lunes')
+ historicamente' 
 '''
 @app.get("/peliculas_dia/{dia}")
 def peliculas_dia(dia:str):
@@ -59,10 +59,7 @@ def franquicia(franquicia:str):
     return {'franchise':franquicia, 'quantity':int(result), 'total revenue':float(total_revenue), 'mean revenue':float(mean_revenue)}
 
 '''
-4. @app.get('/peliculas_pais/{pais}')
-def peliculas_pais(pais:str):
-    'Ingresas el pais, retornando la cantidad de peliculas producidas en el mismo'
-    return {'pais':pais, 'cantidad':respuesta}
+4. 'Ingresas el pais, retornando la cantidad de peliculas producidas en el mismo'
 '''
 @app.get("/peliculas_pais/{pais}")
 def peliculas_pais(pais:str):
@@ -74,10 +71,7 @@ def peliculas_pais(pais:str):
     return {'country':pais, 'quantity':int(result)}
 
 '''
-5. @app.get('/productoras/{productora}')
-def productoras(productora:str):
-    'Ingresas la productora, retornando la ganancia total y la cantidad de peliculas que produjeron''
-    return {'productora':productora, 'ganancia_total':respuesta, 'cantidad':respuesta
+5. Ingresas la productora, retornando la ganancia total y la cantidad de peliculas que produjeron''
 '''
 @app.get("/productoras/{productora}")
 def productoras(productora:str):
@@ -87,10 +81,7 @@ def productoras(productora:str):
     return {'production companies':productora, 'total revenue':float(total_revenue), 'quantity':int(result)}
     
 '''
-6. @app.get('/retorno/{pelicula}')
-def retorno(pelicula:str):
-    ''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''
-    return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}
+6.Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''
 '''
 @app.get("/retorno/{pelicula}")
 def retorno(pelicula:str):
