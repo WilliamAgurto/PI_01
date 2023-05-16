@@ -32,18 +32,22 @@ an API deployment using Render + FastApi. [Here](https://api-ml-98n4.onrender.co
 **1. ETL Process Stage ➡️**
 Main file: [etl_principal.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/ETL.ipynb)
 - The ETL (Extraction, Transformation, and Load) process was carried out.
-- The necessary dataframes for the process were prepared.+
+- The necessary dataframes for the process were prepared.
 - The required MVP (Minimum Viable Product) tasks were performed by:<br>
 
-		i. Some fields, such as belongs_to_collection, production_companies, and others (see data dictionary), are nested, meaning they either have a dictionary or a list as values in each row. You will need to unnest them in order to join them back to the dataset or find a way to access that data without unnesting.<br>
+		i. Some fields, such as belongs_to_collection, production_companies, and others (see data dictionary),<br>
+           are nested, meaning they either have a dictionary or a list as values in each row. You will need to <br>
+           unnest them in order to join them back to the dataset or find a way to access that data without unnesting.<br>
 
 		ii.Null values in the revenue and budget fields should be filled with the number 0.<br>
 	
 		iii.Null values in the release date field should be removed.<br>
 	
-		iv. If there are dates, they should have the format YYYY-mm-dd, and a release_year column should be created to extract the year from the release date.<br>
+		iv. If there are dates, they should have the format YYYY-mm-dd, and a release_year column should be created <br>
+            to extract the year from the release date.<br>
 	
-		v. Create a column for return on investment, called "return," by dividing revenue by budget. When data is not available to calculate this, it should be set to 0.<br>
+		v. Create a column for return on investment, called "return," by dividing revenue by budget.<br>
+           When data is not available to calculate this, it should be set to 0.<br>
         
         vi.Remove columns that will not be used: video, imdb_id, adult, original_title, vote_count, poster_path, and homepage.<br>
 
