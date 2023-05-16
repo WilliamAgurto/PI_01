@@ -65,7 +65,7 @@ def peliculas_pais(pais:str):
     'Ingresas el pais, retornando la cantidad de peliculas producidas en el mismo'
     return {'pais':pais, 'cantidad':respuesta}
 '''
-@app.get("/movies_country/{country}")
+@app.get("/movies_country/{movies_country}")
 def movies_country(country:str):
     df_movies_copy = df_movies.copy()
     country_ = df_movies_copy.production_countries
@@ -93,7 +93,7 @@ def retorno(pelicula:str):
     ''Ingresas la pelicula, retornando la inversion, la ganancia, el retorno y el año en el que se lanzo''
     return {'pelicula':pelicula, 'inversion':respuesta, 'ganacia':respuesta,'retorno':respuesta, 'anio':respuesta}
 '''
-@app.get("/return/{movie}")
+@app.get("/return_/{return_}")
 def return_(movie:str):
     df_movies_copy = df_movies.copy()
     investment = df_movies_copy[df_movies_copy.title == movie].budget[0]
@@ -103,7 +103,7 @@ def return_(movie:str):
     return {'movie':movie, 'investment':float(investment), 'revenue':float(revenue),'return':float(return_), 'year':int(year)}
 
 ##########recommendation function
-@app.get('/get_recomendation/{title}')
+@app.get('/get_recomendation/{get_recomendation}')
 def get_recomendation(title:str):
     df_movies_copy = df_movies.copy()
     # Loading just two columns from CSV file on pandas.
