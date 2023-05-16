@@ -51,7 +51,7 @@ Main file: [etl_principal.ipynb](https://github.com/WilliamAgurto/PI_01/blob/mai
         
         vi.Remove columns that will not be used: video, imdb_id, adult, original_title, vote_count, poster_path, and homepage.<br>
 
-**2. Exploratory Data Analysis Stage ➡️** Main file: [eda_principal.ipynb](https://github.com/WilliamAgurto/PI_01_ML_OPS/blob/master/EDA.ipynb)
+**2. Exploratory Data Analysis Stage ➡️** Main file: [eda_principal.ipynb](https://github.com/WilliamAgurto/PI_01/blob/main/EDA.ipynb)
 
 - The required MVP tasks were performed:
 - The dataframe (movie_dataset) were analyzed in terms of their structure, shape, information, null values, duplicate values, etc.
