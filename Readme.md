@@ -24,7 +24,7 @@
 
 ------------
 This is my first individual project focus on making ETL(Extract, Transform and load), EDA (Exploratory data Analysis) and 
-an API deployment using Render + FastApi. [Here](https://api-ml-98n4.onrender.com/docs) you will find the deployment<br><br>
+a API deployment using Render + FastApi. [Here](https://api-ml-98n4.onrender.com/docs) you will find the deployment<br><br>
 
 ### **Project Development**
 
